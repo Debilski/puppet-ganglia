@@ -31,8 +31,8 @@ class ganglia::gmetad (
   Integer[0, 1] $gmetad_hostnames_case                      = $ganglia::params::gmetad_hostnames_case,
   String[1] $gmetad_status_command                          = $ganglia::params::gmetad_status_command,
 ) inherits ganglia::params {
-  ganglia_validate_clusters($clusters)
-  ganglia_validate_rras($rras)
+#  ganglia_validate_clusters($clusters)
+#  ganglia_validate_rras($rras)
 
   if $gmetad_status_command {
     $hasstatus = false
