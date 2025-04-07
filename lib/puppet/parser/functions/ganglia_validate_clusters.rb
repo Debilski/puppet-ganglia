@@ -58,7 +58,7 @@ module Puppet::Parser::Functions
 
     # which must be an array
     # NOTE: This should likely be removed, as it's validated prior to getting here (param type validation)
-    function_validate_array(args)
+#    function_validate_array(args)
 
     # that is not empty
     clusters = args[0]
@@ -66,7 +66,7 @@ module Puppet::Parser::Functions
 
     # which must contain only Hashes
     clusters.each do |c|
-      function_validate_hash([c])
+#      function_validate_hash([c])
 
       # that are not empty
       raise Puppet::ParseError, 'ganglia_validate_clusters(): nested Hash may not be empty' if c.empty?
